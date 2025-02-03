@@ -111,7 +111,7 @@
 
 //                                 <p>Cart</p>
 //                             </div>
-//                         </NavLink> : <NavLink to="/login">
+//                         </NavLink> : <NavLink to="/buynow">
 //                             <div className="cart_btn">
 //                                 <Badge badgeContent={0} color="secondary">
 //                                     <i className="fas fa-shopping-cart" id="icon"></i>
