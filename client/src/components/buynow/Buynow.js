@@ -12,7 +12,7 @@ const Buynow = () => {
     // console.log(cartdata.length);
 
     const getdatabuy = async () => {
-        const res = await fetch("/cartdetails", {
+        const res = await fetch(`${base_url}/cartdetails`, {
             method: "GET",
             headers: {
                 Accept:"application/json",
