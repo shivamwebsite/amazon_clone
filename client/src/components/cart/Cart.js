@@ -5,6 +5,7 @@ import { Divider } from '@mui/material';
 import { useNavigate, useParams } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 import { LoginContext } from "../context/ContextProvider";
+const base_url="https://amazon-clonefront.onrender.com";
 
 const Cart = () => {
 
@@ -23,7 +24,7 @@ const Cart = () => {
     // // console.log([inddata]);
 
     const getinddata = async () => {
-        const res = await fetch(`/getproductsone/${id}`, {
+        const res = await fetch(`${base_url}/getproductsone/${id}`, {
             method: "GET",
             headers: {
                 // Accept: "application/json",
@@ -50,7 +51,7 @@ const Cart = () => {
 
     const addtocart = async (id) => {
         console.log(id);
-        const check = await fetch(`/addcart/${id}`, {
+        const check = await fetch(`${base_url}/addcart/${id}`, {
             method: "POST",
             headers: {
                 Accept: "application/json",
