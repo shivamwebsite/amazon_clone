@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { LoginContext } from '../context/ContextProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+const base_url="https://amazon-clonefront.onrender.com";
 
 const Option = ({deletedata, get}) => {
     console.log(deletedata);
@@ -12,7 +12,7 @@ const Option = ({deletedata, get}) => {
 
     const removedata = async (req,res) =>{
         try {
-            const res = await fetch(`/remove/${deletedata}`,{
+            const res = await fetch(`${base_url}/remove/${deletedata}`,{
                 method: "DELETE",
                 headers: {
                     Accept: "application/json",
