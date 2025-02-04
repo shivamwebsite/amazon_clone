@@ -5,7 +5,7 @@ import Empty from './Empty';
 import Option from './Option';
 import Right from './Right';
 import Subtotal from './Subtotal';
-
+const base_url="https://amazon-clonefront.onrender.com";
 const Buynow = () => {
 
     const [cartdata, setCartdata] = useState("");
