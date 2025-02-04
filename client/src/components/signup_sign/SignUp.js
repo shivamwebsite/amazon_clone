@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import "./signup.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+const base_url="https://amazon-clonefront.onrender.com";
 
 const Signup = () => {
 
@@ -44,7 +45,7 @@ const Signup = () => {
         //     })
         // }
 
-            const res = await fetch("register", {
+            const res = await fetch(`${base_url}/register`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
