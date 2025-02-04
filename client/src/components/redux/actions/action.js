@@ -1,7 +1,8 @@
+const base_url="https://amazon-clonefront.onrender.com";
 
 export const getProducts = ()=> async(dispatch)=>{
     try {
-        const data = await fetch("/getproducts",{
+        const data = await fetch(`${base_url}/getproducts`,{
                 method:"GET",
                 headers:{
                     "Content-Type":"application/json"
