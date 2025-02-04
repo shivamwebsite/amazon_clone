@@ -4,7 +4,7 @@ import { LoginContext } from '../context/ContextProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./signup.css"
-
+const base_url="https://amazon-clonefront.onrender.com";
 
 const Sign_in = () => {
 
@@ -35,7 +35,7 @@ const Sign_in = () => {
         const { email, password } = logdata;
         // console.log(email);
         // try {
-            const res = await fetch("/login", {
+            const res = await fetch(`${base_url}/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
