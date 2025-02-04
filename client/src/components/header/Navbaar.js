@@ -187,6 +187,7 @@ import 'react-toastify/dist/ReactToastify.css';
 // import ListItem from '@mui/material/ListItem';
 
 import { products } from '../home/productdata';
+const base_url="https://amazon-clonefront.onrender.com";
 
 const Navbaar = () => {
 
@@ -213,7 +214,7 @@ const Navbaar = () => {
     const [dropen, setDropen] = useState(false);
 
     const getdetailsvaliduser = async () => {
-        const res = await fetch("/validuser", {
+        const res = await fetch(`${base_url}/validuser`, {
             method: "GET",
             headers: {
                 Accept: "application/json",
@@ -245,7 +246,7 @@ const Navbaar = () => {
 
     // for logout
     const logoutuser = async () => {
-        const res2 = await fetch("/logout", {
+        const res2 = await fetch(`${base_url}/logout`, {
             method: "GET",
             headers: {
                 Accept: "application/json",
