@@ -129,7 +129,7 @@ router.get("/getproductsone/:id", async(req, res)=> {
 
 
 // adding the data into cart
-router.post("/addcart/:id", authenicate, async (req, res) => {
+router.post("/addcart/:id",async (req, res) => {
 
     try {
         // console.log("perfect 6");
@@ -158,7 +158,7 @@ router.post("/addcart/:id", authenicate, async (req, res) => {
 
 
 // get data into the cart
-router.get("/cartdetails", authenicate, async (req, res) => {
+router.get("/cartdetails",async (req, res) => {
     try {
         const buyuser = await USER.findOne({ _id: req.userID });
         console.log(buyuser + "user hain buy pr");
