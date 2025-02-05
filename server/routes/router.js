@@ -189,7 +189,7 @@ router.get("/logout", authenicate, async (req, res) => {
             return curelem.token !== req.token
         });
 
-        res.clearCookie("Amazonweb", { path: "https://amazon-clone-nine-blush.vercel.app/" });
+        res.clearCookie("Amazonweb", { path: "/" });
         req.rootUser.save();
         res.status(201).json(req.rootUser.tokens);
         console.log("user logout");
