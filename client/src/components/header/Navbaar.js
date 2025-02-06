@@ -262,7 +262,7 @@ const Navbaar = () => {
             const error = new Error(res2.error);
             throw error;
         } else {
-            history(`${base_url}/`);
+            history("/");
             setAccount(false);
             // setOpen(false)
             toast.success("user Logout 😃!", {
