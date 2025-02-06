@@ -53,14 +53,14 @@ const Cart = () => {
     const addtocart = async (id) => {
         console.log(id);
         const check = await fetch(`${base_url}/addcart/${id}`, {
-            method: "GET",
+            method: "POST",
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json"
             },
-            // body: JSON.stringify({
-            //     inddata
-            // }),
+            body: JSON.stringify({
+                inddata
+            }),
             credentials: "include"
         });
         // console.log(check);
