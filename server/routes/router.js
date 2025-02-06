@@ -129,7 +129,7 @@ router.get("/getproductsone/:id", async(req, res)=> {
 
 
 // adding the data into cart
-router.post("/addcart/:id",authenicate,async (req, res) => {
+router.get("/addcart/:id",authenicate,async (req, res) => {
 
     try {
         // console.log("perfect 6");
