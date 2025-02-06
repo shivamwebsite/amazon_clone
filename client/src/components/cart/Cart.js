@@ -58,9 +58,9 @@ const Cart = () => {
                 Accept: "application/json",
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({
-                inddata
-            }),
+            // body: JSON.stringify({
+            //     inddata
+            // }),
             credentials: "include"
         });
         // console.log(check);
