@@ -71,7 +71,7 @@ const Cart = () => {
             alert("no data available")
         } else {
             // alert("data added in your cart");
-            history(`${base_url}/buynow`);
+            history("/buynow");
             setAccount(data1);
         }
     }
