@@ -130,7 +130,7 @@ router.get("/getproductsone/:id", async(req, res)=> {
 
 // adding the data into cart
 router.post("/addcart/:id",authenicate,async (req, res) => {
-
+ res.header("Access-Control-Allow-Origin","https://amazon-clone-nine-blush.vercel.app/");
     try {
         // console.log("perfect 6");
         const { id } = req.params;
@@ -143,9 +143,7 @@ router.post("/addcart/:id",authenicate,async (req, res) => {
 
         if (Usercontact) {
             const cartData = await Usercontact.addcartdata(cart);
-
             await Usercontact.save();
-             res.header("Access-Control-Allow-Origin","https://amazon-clone-nine-blush.vercel.app/");
             console.log(cartData);
             console.log(Usercontact);
             res.status(201).json(Usercontact);
