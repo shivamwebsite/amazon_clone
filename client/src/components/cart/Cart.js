@@ -56,12 +56,13 @@ const Cart = () => {
             method: "POST",
             headers: {
                 Accept: "application/json",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin":"*",
             },
             body: JSON.stringify({
                 inddata
             }),
-            // credentials: "include"
+            credentials: "include"
         });
         // console.log(check);
         const data1 = await check.json();
