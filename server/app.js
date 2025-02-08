@@ -20,6 +20,7 @@ app.use(cors({
     methods:["GET","POST","PUT","DELETE"],
         headers:{
             "Access-Control-Allow-Origin":"*",
+        }
 }));
 app.use(router);
 
