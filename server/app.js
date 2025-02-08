@@ -15,13 +15,13 @@ const router = require("./routes/router");
 app.use(express.json());
 app.use(cookieParser(""));
 app.use(cors());
-app.use(cors({
-    origin:"https://amazon-clone-nine-blush.vercel.app/",
-    methods:["GET","POST","PUT","DELETE"],
-        headers:{
-            "Access-Control-Allow-Origin":"*",
-        }
-}));
+// app.use(cors({
+//     origin:"https://amazon-clone-nine-blush.vercel.app/",
+//     methods:["GET","POST","PUT","DELETE"],
+//         headers:{
+//             "Access-Control-Allow-Origin":"*",
+//         }
+// }));
 app.use(router);
 
 const port=process.env.PORT || 8005;
