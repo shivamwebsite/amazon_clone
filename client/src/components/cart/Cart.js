@@ -57,7 +57,7 @@ const Cart = () => {
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
-                "Access-Control-Allow-Origin":"*",
+                "Access-Control-Allow-Origin":`${base_url}`,
             },
             body: JSON.stringify({
                 inddata
