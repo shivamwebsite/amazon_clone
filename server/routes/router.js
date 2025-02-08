@@ -145,6 +145,7 @@ router.post("/addcart/:id",authenicate,async (req, res) => {
             const cartData = await Usercontact.addcartdata(cart);
 
             await Usercontact.save();
+             res.header("Access-Control-Allow-Origin","https://amazon-clone-nine-blush.vercel.app/");
             console.log(cartData);
             console.log(Usercontact);
             res.status(201).json(Usercontact);
