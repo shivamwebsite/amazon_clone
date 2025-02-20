@@ -39,9 +39,9 @@ router.post("/register", async (req, res) => {
         const preuser = await USER.findOne({ email: email });
 
         if (preuser) {
-            res.status(422).json({ error: "This email is already exist" })
+            res.status(423).json({ error: "This email is already exist" })
         } else if (password !== cpassword) {
-            res.status(422).json({ error: "password are not matching" })
+            res.status(424).json({ error: "password are not matching" })
         } else {
 
             const finalUser = new USER({
@@ -57,7 +57,7 @@ router.post("/register", async (req, res) => {
 
     } catch(error) {
         // console.log("error the bhai catch ma for registratoin time" + error.message);
-        res.status(422).send(error);
+        res.status(425).send(error);
     }
 
 });
@@ -89,7 +89,7 @@ router.post("/login", async (req, res) => {
                 });
 
             if (!isMatch) {
-                res.status(400).json({ error: "invalid details" });
+                res.status(401).json({ error: "invalid details" });
             } else {
                 
                 // const token = await userlogin.generatAuthtoken();
@@ -100,11 +100,11 @@ router.post("/login", async (req, res) => {
             }
 
          } else {
-            res.status(400).json({ error: "user not exist" });
+            res.status(402).json({ error: "user not exist" });
         }
 
     } catch (error) {
-        res.status(400).json({ error: "invalid crediential pass" });
+        res.status(403).json({ error: "invalid crediential pass" });
         // console.log("error the bhai catch ma for login time" + error.message);
     }
 });
