@@ -50,11 +50,26 @@ const Sign_in = () => {
             // console.log(data);
 
             if (res.status === 400 || !data) {
-                console.log("invalid details");
-                toast.error("Invalid Details 👎!", {
-                    position: "top-center"
-                });
-            } else {
+            console.log("invalid details");
+            toast.error("Fill all the details 🫠!", {
+                position: "top-center"
+            });
+        } else if (res.status === 401) {
+            console.log("invalid details");
+            toast.error("Incorrect Password 😒!", {
+                position: "top-center"
+            });
+        } else if (res.status === 402) {
+            console.log("invalid details");
+            toast.error("User not exist Register first 😞!", {
+                position: "top-center"
+            });
+        } else if (res.status === 403) {
+            // alert("no data");
+            toast.warn("There is some technical issue refresh the page and login again 😅!", {
+                position: "top-center",
+            })
+        } else {
                 setAccount(data);
                 toast.success("Login Successfully done 😃!", {
                     position: "top-center"
