@@ -60,10 +60,27 @@ const Signup = () => {
 
             if (res.status === 422 || !data) {
                 // alert("no data");
-                toast.warn("Invalid Details 👎!", {
+                toast.warn("Fill up all the details 🫠!", {
                     position: "top-center",
                 })
-            } else {
+            } else if (res.status === 423) {
+                // alert("no data");
+                toast.warn("Email Id already exist 🤨!", {
+                    position: "top-center",
+                })
+                setUdata({...udata, email: ""});
+            }  else if (res.status === 424) {
+                // alert("no data");
+                toast.warn("Password doesn't match 🧐!", {
+                    position: "top-center",
+                })
+                setUdata({...udata, password: "", cpassword: ""});
+            }  else if (res.status === 425) {
+                // alert("no data");
+                toast.warn("There is some technical issue refresh the page and register again 😅!", {
+                    position: "top-center",
+                })
+            }  else {
                 // alert("data succesfully added");
                 toast.success("Registration Successfully done 😃!", {
                                     position: "top-center" ,
